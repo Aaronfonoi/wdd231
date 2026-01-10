@@ -93,10 +93,7 @@ nav.open {
     font-weight: 600;
 }
 
-/* when the button is clicked - the open class is toggled (added/removed) */
-/* .navigation-links.open {
-	display: block;
-} */
+
 
 nav ul {
     list-style-type: none;
