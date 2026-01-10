@@ -1,12 +1,92 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wdd231</title>
+    <title>WDD 231 | Web Frontend I | Aaron Fonoimoana</title>
+    <meta name="description" content="This page is dedicated to learning how to build dynamic websites using HTML, CSS, JavaScript, JSON, API, and UX design techniques. The final website in this repository was created during the WDD 231 classes, from September to December 2024. ">
+    <meta name="author" content="Aaron Fonoimoana">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/base-large.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script defer src="scripts/getdates.js"></script>
+    <script defer src="scripts/filtered-courses.js"></script>
 </head>
 <body>
-    <h1>wdd 231 - Fonoimoana</h1>
-    
+    <header>
+        <!-- HEADER | NAVIGATION -->
+        <div class="header">
+            <div class="image-profile">
+                <img src="images/profile.jpg" alt="Aaron Fonoimoana profile photo" width="150">
+            </div>
+            <h1>Aaron Fonoimoana</h1>
+            <!-- Hamburger menu button -->
+            <button id="menubutton" title="menu button"></button>
+        </div>
+        
+        <nav id="animatemenu">
+            <ul class="navigation-links">
+                <li><a href="https://aaronfonoi.github.io/wdd231/" class="active-menu-link">Home</a></li>
+                <li><a href="">Chamber</a></li>
+                <li><a href="https://github.com/Aaronfonoi">Github Profile</a></li>
+                <li><a href="https://www.linkedin.com/in/aaron-fonoimoana-1a2830195/">LinkedIn</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- CONTENT SECTION -->
+        
+
+        <div class="bento-grid">
+            <section class="card">
+                <h2>About me</h2>
+
+                <p class="about-me">
+                    A little about me is that I grew up in Burlington Washington where my family and I currently live.
+                    Burlington is not a very big city and if we want to have a family outing we often have to drive somewhere
+                    a bit far depending on what we want to do. Another thing about me is that I am currently working as an electrician while I 
+                    pursue a degree. 
+                </p>
+                
+                
+            </section>
+
+            <section class="card">
+                <h2>My family </h2>
+                <div class="image">
+                    <img src="images/myfamily.webp" alt="Mount vernon stake center" width="150">
+                </div>
+                <p>Mount Vernon stake center.</p>
+            </section>
+
+            <section class="card large-card">
+                <h2>Web and Computer Programming Certificate</h2>
+
+                <!-- Buttons for filtering -->
+                <div class="courses-type">
+                    <button class="filter-btn" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="CSE">CSE</button>
+                    <button class="filter-btn" data-filter="WDD">WDD</button>
+                </div>
+
+                <!-- Courses to be filtered -->
+                <div class="courses">
+                    
+                </div>
+                <div>
+                    <p>Total Credits: <span id="total-credits"></span></p>
+                </div>
+
+            </section>
+        </div>
+
+
+        
+    </main>
+    <footer>
+        <p id="year">&copy; <span class="highlight">YYYY</span> Aaron Fonoimoana | Burlington, WA, US</p>
+        <p id="lastModifiedDate" class="highlight">Last modified: </p>
+    </footer>
 </body>
 </html>
