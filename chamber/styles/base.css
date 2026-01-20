@@ -34,7 +34,7 @@ header {
 }
 
 .site-logo img {
-    width: 9rem; /* Adjust logo size */
+    width: 5rem; /* Adjust logo size */
     margin: .1em 1em;
 }
 
@@ -214,49 +214,9 @@ h1 {
 
 
 
-/* Membership level cards */
 
-    .membership-container {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 2em;
-        margin: 2em auto;
-        max-width: 90%;
-    }
     
-    .membership-card {
-        background-color: rgba(100, 200, 140, 0.2);
-        border: 1px solid var(--secondary-color);
-        border-radius: 20px;
-        padding: 1em;
-        text-align: center;
-        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    }
-    
-    .membership-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    }
-    
-    .membership-card p {
-        font-size: 1.2rem;
-        color: var(--secondary-color);
-        margin: .4em 0;
-    }
-    
-    button {
-        background-color: var(--secondary-color);
-        border: none;
-        padding: 1em 2em;
-        color: white;
-        font-size: .8rem;
-        cursor: pointer;
-        transition: background-color 0.3s ease-in-out;
-    }
-    
-    button:hover {
-        color: var(--primary-color);
-    }
+
     
 
 

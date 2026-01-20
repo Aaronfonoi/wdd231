@@ -7,7 +7,7 @@
     <meta name="description" content="This page is the chamber of commerce project of the WDD 231 course">
     <meta name="author" content="Aaron Fonoimoana">
     <link rel="stylesheet" href="styles/base.css">
-    <link rel="stylesheet" href="styles/large.css">
+    <link rel="stylesheet" href="styles/large.css" media="(min-width:800px)">
     <link rel="icon" href="icon/favicon.ico">
     <meta property="og:title" content="Burlington Chamber of Commerce ">
     <meta property="og:type" content="website">
@@ -16,9 +16,11 @@
     <meta property="og:descripiton" content="Burlington chamber of commerce directory of buisnesses and things alike.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" as="style" onload="this.rel='stylesheet'">
+    <noscript><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"></noscript>
     <script defer src="scripts/getdates.js"></script>
     <script defer src="scripts/directory.js"></script>
+    <script defer src="scripts/menu.js"></script>
    
 
 </head>
@@ -29,7 +31,7 @@
 
         <div class="header">
             <div class="site-logo">
-                <a href=""><img src="images/logo.webp" alt="Logo for site" width="50"></a>
+                <a href=""><img src="images/logo.webp" alt="Logo for site" width="50" loading="lazy"></a>
             </div>
             <!-- Hamburger menu button -->
             <button id="menubutton" aria-label="menu"></button>
@@ -37,10 +39,10 @@
 
         <nav id="animatemenu">
             <ul class="navigation-links">
-                <li><a href="https://aaronfonoi.github.io/wdd231/directory.html">Home</a></li>
-                <li><a href="https://aaronfonoi.github.io/wdd231/directory.html">directory</a></li>
-                <li><a href="https://aaronfonoi.github.io/wdd231/directory.html">Join</a></li>
-                <li><a href="https://aaronfonoi.github.io/wdd231/directory.html">Discover</a></li>
+                <li><a href="https://aaronfonoi.github.io/wdd231/chamber.html">Home</a></li>
+                <li><a href="https://aaronfonoi.github.io/wdd231/chamber/directory.html" class="active-menu-link">directory</a></li>
+                <li><a href="https://aaronfonoi.github.io/wdd231/chamber/join.html">Join</a></li>
+                <li><a href="https://aaronfonoi.github.io/wdd231/chamber/discover.html">Discover</a></li>
             </ul>
         </nav>
     </header>
@@ -81,7 +83,7 @@
 
             <div class="footer-bottom">
                 <div class="footer-logo">
-                    <a href=""><img src="images/logo.webp" alt="site-logo" width="50"></a>
+                    <a href=""><img src="images/logo.webp" alt="site-logo" width="50" loading="lazy"></a>
                 </div>
                 <p id="year">&copy; <span class="highlight">YYYY</span> Aaron Fonoimoana | Burlington, WA, US</p>
             </div>
