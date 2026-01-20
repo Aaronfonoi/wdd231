@@ -1,0 +1,172 @@
+:root {
+	--primary-color: rgb(100, 200, 140);
+ --secondary-color: rgb(23, 53, 53);
+  --accent1-color: rgb(125, 225, 227);
+	--accent2-color: rgb(105, 222, 193);
+	--accent3-color: rgb(12, 22, 21);
+}
+
+
+
+@media (min-width: 1000px) {
+    .nav-links {
+        display: flex;
+        align-items: center;
+    }
+
+
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        color: white;
+        box-shadow: 0 0 20px rgba(12, 22, 21, 0.8);
+        width: 100%;
+        position: fixed;  /* Fix header position */
+        top: 0;
+        left: 0;
+        z-index: 1000;
+    }
+
+
+
+    /*----------- NAVIGATION --------------*/
+
+
+nav {
+    background-color: white;
+    font-size: 1rem; /* Font size for navigation */
+}
+
+nav ul {
+    display: flex; /* Horizontal layout for nav items */
+}
+
+
+
+nav a.active-menu-link {
+    text-decoration: underline; /* Underline for active link */
+    text-underline-offset: 5px; /* Offset for underline */
+    text-decoration-thickness: 1px; /* Thickness for underline */
+}
+
+  
+  /* Navigation Links */
+  
+  .navigation-links a {
+    list-style-type: none; /* Removing bullet points */
+    display: flex; /* Align items in a row */
+    justify-content: center; /* Center the items */
+    text-decoration: none; /* Remove underline */
+    font-weight: 700;
+    color: rgb(23, 53, 53);
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  /* Hover Effects */
+  .navigation-links a:hover {
+    color: rgb(41, 100, 65);
+  }
+  
+
+
+/*----------- MAIN --------------*/
+
+
+
+
+
+
+h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 20px 0;
+    color: rgb(23, 53, 53);
+}
+
+p {
+    font-size: .9rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+
+
+
+
+
+
+
+
+/*----------- DIRECTORY SECTION --------------*/
+
+
+h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin: 4em 0 0 0;
+    color: rgb(23, 53, 53);
+}
+
+#directory-container.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Adjust the size as needed */
+    gap: 1rem; /* Space between grid items */
+}
+
+#directory-container.list {
+    display: block; /* Stack items vertically */
+}
+
+
+#directory-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+    gap: 20px; /* space between the cards */
+    max-width: 1200px; /* you can adjust this if needed */
+    margin: 0 auto; /* center the grid */
+    padding: 20px;
+}
+
+
+
+.menu {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.menu button {
+    background-color: rgb(23, 53, 53);
+    border: 1px solid var(--primary-color);
+    color: rgb(100, 200, 140);
+    padding: .8rem 3rem;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.menu button:hover {
+    background-color: transparent; /* Background color on hover */
+    color: var(--primary-color); /* Text color on hover */
+}
+
+
+/* For smaller screens, adjust the grid layout */
+@media (max-width: 1000px) {
+    #directory-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+    }
+}
+
+@media (max-width: 660px) {
+    #directory-container {
+        grid-template-columns: 1fr; /* 1 column on small screens */
+        justify-items: center;
+    }
+}
+
+
+
+}
