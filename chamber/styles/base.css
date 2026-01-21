@@ -1,9 +1,9 @@
 :root {
-    --primary-color: rgb(100, 200, 140);
-    --secondary-color: rgb(23, 53, 53);
-    --accent1-color: rgb(125, 225, 227);
-    --accent2-color: rgb(105, 222, 193);
-    --accent3-color: rgb(12, 22, 21);
+    --primary-color: #228B22; /* Forest green for farm fields */
+    --secondary-color: #8B4513; /* Saddle brown for earthy tones */
+    --accent1-color: #FFD700; /* Gold for wheat/sun */
+    --accent2-color: #32CD32; /* Lime green for fresh crops */
+    --accent3-color: #654321; /* Dark brown for barns/wood */
 }
 
 * {
@@ -24,7 +24,7 @@ header {
     background: white;
     display: grid;
     align-items: center;
-    box-shadow: 0 0 20px rgba(12, 22, 21, 0.4);
+    box-shadow: 0 0 20px rgba(101, 67, 33, 0.4);
     position: fixed;  /* Fix header position */
     top: 0;
     left: 0;
@@ -57,7 +57,7 @@ nav a {
     display: block;
     text-align: center;
     text-decoration: none;
-    color: rgb(100, 200, 140); /* Text color for links */
+    color: white; /* Changed from primary green for better contrast on brown background */
     font-weight: 500;
     margin: 0 1rem; /* Margin between links */
     padding: 1.4rem 1rem; /* Padding around links */
@@ -65,7 +65,7 @@ nav a {
 }
 
 nav a:hover {
-    color: white; /* Change text color on hover */
+    color: var(--primary-color); /* Change text color on hover */
 }
 
 nav a.active-menu-link {
@@ -86,7 +86,7 @@ nav a.active-menu-link {
     text-align: right;
     font-weight: 300;
     border: 0;
-    color: rgb(23, 53, 53); /* Color for hamburger button */
+    color: var(--secondary-color); /* Color for hamburger button */
     position: absolute;
     top: 1rem;
     right: 1rem;
@@ -135,7 +135,7 @@ nav a.active-menu-link {
         font-size: 2rem;
         font-weight: bold;
         margin: 20px 0;
-        color: rgb(23, 53, 53);
+        color: var(--secondary-color);
     }
     
     p {
@@ -160,7 +160,7 @@ h1 {
     text-align: center;
     font-size: 2rem;
     margin: 4em 0 1em 0;
-    color: rgb(23, 53, 53);
+    color: var(--secondary-color);
 }
 
 .menu {
@@ -228,7 +228,7 @@ h1 {
 /*----------- FOOTER --------------*/
 
 .footer {
-    background: linear-gradient(to top, rgb(12, 22, 21), rgb(23, 53, 53));
+    background: linear-gradient(to top, #654321, #8B4513);
     color: white;
     padding: 40px 0 0;
 }
@@ -280,7 +280,7 @@ h1 {
 }
 
 .footer-section ul li a:hover {
-    color: #64c88c;
+    color: #228B22;
     text-decoration: underline;
 }
 
@@ -302,13 +302,13 @@ h1 {
 }
 
 .social-links li a:hover {
-    color: #64c88c;
+    color: #228B22;
 }
 
 .footer-separator {
     width: 100%;
     border: 0;
-    border-top: 1px solid rgba(105, 222, 193, 0.5);
+    border-top: 1px solid rgba(50, 205, 50, 0.5);
     margin: 0 0 10px;
 }
 
@@ -342,7 +342,7 @@ h1 {
 footer p {
     width: 100%;
     justify-content: center;
-    color: #898989;
+    color: #ffffff;
 }
 
 /* Responsive */

@@ -1,9 +1,9 @@
 :root {
-	--primary-color: rgb(100, 200, 140);
- --secondary-color: rgb(23, 53, 53);
-  --accent1-color: rgb(125, 225, 227);
-	--accent2-color: rgb(105, 222, 193);
-	--accent3-color: rgb(12, 22, 21);
+	--primary-color: #228B22; /* Forest green for farm fields */
+ --secondary-color: #8B4513; /* Saddle brown for earthy tones */
+  --accent1-color: #FFD700; /* Gold for wheat/sun */
+	--accent2-color: #32CD32; /* Lime green for fresh crops */
+	--accent3-color: #654321; /* Dark brown for barns/wood */
 }
 
 
@@ -20,7 +20,7 @@
         align-items: center;
         justify-content: space-around;
         color: white;
-        box-shadow: 0 0 20px rgba(12, 22, 21, 0.8);
+        box-shadow: 0 0 20px rgba(101, 67, 33, 0.8);
         width: 100%;
         position: fixed;  /* Fix header position */
         top: 0;
@@ -59,13 +59,13 @@ nav a.active-menu-link {
     justify-content: center; /* Center the items */
     text-decoration: none; /* Remove underline */
     font-weight: 700;
-    color: rgb(23, 53, 53);
+    color: var(--secondary-color);
     transition: background-color 0.3s, color 0.3s;
   }
   
   /* Hover Effects */
   .navigation-links a:hover {
-    color: rgb(41, 100, 65);
+    color: var(--primary-color);
   }
   
 
@@ -81,7 +81,7 @@ h2 {
     font-size: 2rem;
     font-weight: bold;
     margin: 20px 0;
-    color: rgb(23, 53, 53);
+    color: var(--secondary-color);
 }
 
 p {
@@ -106,7 +106,7 @@ h1 {
     text-align: center;
     font-size: 2rem;
     margin: 4em 0 0 0;
-    color: rgb(23, 53, 53);
+    color: var(--secondary-color);
 }
 
 #directory-container.grid {
@@ -139,9 +139,9 @@ h1 {
 }
 
 .menu button {
-    background-color: rgb(23, 53, 53);
+    background-color: var(--secondary-color);
     border: 1px solid var(--primary-color);
-    color: rgb(100, 200, 140);
+    color: rgba(255, 255, 255, 0.8);
     padding: .8rem 3rem;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
