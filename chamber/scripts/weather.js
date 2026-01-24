@@ -44,8 +44,8 @@ const forecastTown = document.querySelector('#forecast-town');
 const forecastTempToday = document.querySelector('#forecast-temp-today');
 const forecastTempNext = document.querySelector('#forecast-temp-next');
 const forecastTempAfter = document.querySelector('#forecast-temp-after');
-const dayNameNext = document.querySelector('#day-name-next');
-const dayNameAfter = document.querySelector('#day-name-after');
+const dayNameNext = document.querySelector('#day-name-next span:first-child');
+const dayNameAfter = document.querySelector('#day-name-after span:first-child');
 
 // Forecast API URL
 const forecastUrl = `//api.openweathermap.org/data/2.5/forecast?lat=${myLat}&lon=${myLong}&appid=${myKey}&units=imperial`;
@@ -73,31 +73,74 @@ function getDayName(date) {
 
 // DISPLAY FORECAST DATA ONTO THE WEB PAGE
 function displayForecast(data) {
-    // Extract forecast data for 3-hour intervals (current and future days)
-    const todayForecast = data.list[0]; // First item for today
-    const nextDayForecast = data.list[8]; // Roughly 24 hours later
-    const dayAfterNextForecast = data.list[16]; // Roughly 48 hours later
-    
     // Display town name
     forecastTown.innerHTML = data.city.name;
 
-    // Display today's forecast temperature (rounded to whole number)
-    forecastTempToday.innerHTML = `${Math.round(todayForecast.main.temp)}&deg;F`;
+    // Group forecast data by day
+    const dailyForecasts = groupForecastsByDay(data.list);
 
-    // Calculate and display the day names for the next two days
-    const today = new Date(); // Get current date
-    const nextDay = new Date(today);
-    nextDay.setDate(today.getDate() + 1); // Calculate the next day
-    const dayAfterNext = new Date(today);
-    dayAfterNext.setDate(today.getDate() + 2); // Calculate the day after the next
+    // Get the next 3 days (including today if it's not too late, otherwise start from tomorrow)
+    const today = new Date();
+    const currentHour = today.getHours();
 
-    // Update day names for tomorrow and the day after tomorrow
-    dayNameNext.innerHTML = `${getDayName(nextDay)}:`;
-    dayNameAfter.innerHTML = `${getDayName(dayAfterNext)}:`;
+    let startIndex = 0;
+    // If it's after 6 PM, start showing tomorrow's forecast as "today"
+    if (currentHour >= 18) {
+        startIndex = 1;
+    }
 
-    // Display forecast temperatures for the next two days (rounded to whole number)
-    forecastTempNext.innerHTML = `${Math.round(nextDayForecast.main.temp)}&deg;F`;
-    forecastTempAfter.innerHTML = `${Math.round(dayAfterNextForecast.main.temp)}&deg;F`;
+    const forecastsToShow = dailyForecasts.slice(startIndex, startIndex + 3);
+
+    // Display today's forecast (or tomorrow's if late in the day)
+    if (forecastsToShow[0]) {
+        const todayData = forecastsToShow[0];
+        forecastTempToday.innerHTML = `${Math.round(todayData.avgTemp)}&deg;F`;
+    }
+
+    // Display next day forecast
+    if (forecastsToShow[1]) {
+        const nextDayData = forecastsToShow[1];
+        const nextDay = new Date(today);
+        nextDay.setDate(today.getDate() + (startIndex + 1));
+
+        dayNameNext.innerHTML = `${getDayName(nextDay)}:`;
+        forecastTempNext.innerHTML = `${Math.round(nextDayData.avgTemp)}&deg;F`;
+    }
+
+    // Display day after next forecast
+    if (forecastsToShow[2]) {
+        const dayAfterData = forecastsToShow[2];
+        const dayAfter = new Date(today);
+        dayAfter.setDate(today.getDate() + (startIndex + 2));
+
+        dayNameAfter.innerHTML = `${getDayName(dayAfter)}:`;
+        forecastTempAfter.innerHTML = `${Math.round(dayAfterData.avgTemp)}&deg;F`;
+    }
+}
+
+// Function to group forecast data by day and calculate daily averages
+function groupForecastsByDay(forecastList) {
+    const dailyData = {};
+
+    forecastList.forEach(item => {
+        const date = new Date(item.dt * 1000);
+        const dayKey = date.toDateString();
+
+        if (!dailyData[dayKey]) {
+            dailyData[dayKey] = {
+                temps: [],
+                date: date
+            };
+        }
+
+        dailyData[dayKey].temps.push(item.main.temp);
+    });
+
+    // Convert to array and calculate averages
+    return Object.values(dailyData).map(day => ({
+        date: day.date,
+        avgTemp: day.temps.reduce((sum, temp) => sum + temp, 0) / day.temps.length
+    })).sort((a, b) => a.date - b.date);
 }
 
 // Call the forecast API function
