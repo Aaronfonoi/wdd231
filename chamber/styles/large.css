@@ -1,10 +1,11 @@
 :root {
 	--primary-color: #228B22; /* Forest green for farm fields */
- --secondary-color: #8B4513; /* Saddle brown for earthy tones */
-  --accent1-color: #FFD700; /* Gold for wheat/sun */
+	--secondary-color: #8B4513; /* Saddle brown for earthy tones */
+	--accent1-color: #FFD700; /* Gold for wheat/sun */
 	--accent2-color: #32CD32; /* Lime green for fresh crops */
 	--accent3-color: #654321; /* Dark brown for barns/wood */
 }
+
 
 
 
@@ -70,18 +71,35 @@ nav a.active-menu-link {
   
 
 
-/*----------- MAIN --------------*/
+/*----------- HERO SECTION FOR LARGE SCREENS --------------*/
 
 
+.hero-container {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
 
+.hero {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5em 10em;
+    
+    color: #333;
+}
 
-
+.hero-text {
+    max-width: 50%;
+    text-align: left;
+}
 
 h2 {
     font-size: 2rem;
     font-weight: bold;
     margin: 20px 0;
-    color: var(--secondary-color);
+    color: #8B4513;
 }
 
 p {
@@ -91,9 +109,135 @@ p {
     color: #555;
 }
 
+.hero-btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #8B4513;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.hero-btn:hover {
+    background-color: rgb(83, 167, 117);
+}
+
+.hero-image {
+    max-width: 45%;
+    height: auto;
+    border-radius: 10px;
+}
 
 
 
+/*----------- WEATHER CARD --------------*/
+
+
+.main-container {
+    width: 100%; /* Same as .weather-container */
+    margin: 0 auto; /* Centers the container */
+    background-color: #f0f4f8;
+    padding: 2em 0;
+}
+
+h1 {
+    margin: 1em 0; /* Remove auto centering */
+    padding-left: 0; /* Ensure no extra padding */
+    color: #8B4513;
+    font-size: 1.8rem;
+    text-align: left; /* Align text to the left */
+}
+
+.weather-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 80%;
+    gap: 1em;
+    margin: 0 auto; /* Centers the container horizontally */
+    max-width: 1200px;
+}
+
+.card-events {
+    border: 1px solid #654321;
+    background-color: rgba(100, 200, 140, 0.4); /* Fix rgba color format */
+    border-radius: 10px;
+    text-align: left;
+    width: 50%;
+    height: 300px;
+    margin: 2em 0; /* Center margin adjustments */
+}
+
+.card-events h2 {
+    background-color: #8B4513;
+    color: #ffff;
+    border-radius: 10px 10px 0 0;
+    padding: .4em .6em;
+    margin: 0 0 1em 0;
+    font-weight: 400;
+    font-size: 1.4rem;
+}
+
+.card-events h3,
+.card-events p {
+    margin: 1em;
+}
+
+.card-weather {
+    border: 1px solid #654321;
+    background-color: rgba(100, 200, 140, 0.4);
+    border-radius: 10px;
+    text-align: center;
+    width: 25%; /* Adjusted for consistent layout */
+    height: 300px;
+    margin: 2em 0; /* Same margin as other cards */
+}
+
+.card-weather h2 {
+    background-color: #8B4513;
+    color: #ffff;
+    border-radius: 10px 10px 0 0;
+    padding: .4em;
+    margin: 0 0 1em 0;
+    font-weight: 400;
+    font-size: 1.4rem;
+}
+
+.card-weather h3,
+.card-weather #description,
+.card-weather #temperature {
+    margin: auto 0;
+}
+
+.card-forecast {
+    border: 1px solid #ff;
+    background-color: rgba(100, 200, 140, 0.4);
+    border-radius: 10px;
+    text-align: left;
+    width: 25%; /* Adjusted for consistent layout */
+    height: 300px;
+    margin: 2em 0; /* Same margin as other cards */
+}
+
+.card-forecast h2 {
+    background-color: #8B4513;
+    color: #ffff;
+    border-radius: 10px 10px 0 0;
+    padding: .4em .6em;
+    margin: 0;
+    font-weight: 400;
+    font-size: 1.4rem;
+}
+
+.card-forecast h3,
+.card-forecast p {
+    margin: 1em;
+    text-transform: capitalize;
+    color: #000000;
+}
 
 
 

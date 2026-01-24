@@ -3,22 +3,22 @@ function getCurrentYear() {
     return new Date().getFullYear();
 }
 
-// To update the copyright year in the footer
-document.addEventListener("DOMContentLoaded", function() {
-    var yearSpan = document.querySelector("#year span.highlight");
-    if (yearSpan) {
-		yearSpan.textContent = getCurrentYear();
-    }
-});
-
-
 // Function to get the last modified date of the document
-document.addEventListener("DOMContentLoaded", function() {
-    var lastModifiedDate = document.lastModified;
+function getLastModifiedDate() {
+    return document.lastModified;
+}
 
-    // Update the second paragraph in the footer with the last modified date
-    var modifiedParagraph = document.querySelector("footer p:nth-of-type(2)");
-    if (modifiedParagraph) {
-        modifiedParagraph.textContent = "Last modified: " + lastModifiedDate;
+// Update footer information when DOM is ready
+document.addEventListener("DOMContentLoaded", function() {
+    // Update copyright year
+    const yearSpan = document.querySelector("#year .highlight");
+    if (yearSpan) {
+        yearSpan.textContent = getCurrentYear();
+    }
+
+    // Update last modified date
+    const lastModifiedElement = document.getElementById("lastModifiedDate");
+    if (lastModifiedElement) {
+        lastModifiedElement.textContent = "Last modified: " + getLastModifiedDate();
     }
 });
