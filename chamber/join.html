@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Burlington Chamber of Commerce</title>
+    <meta name="description" content="This page is the chamber of commerce project of the WDD 231 course">
+    <meta name="author" content="Aaron Fonoimoana">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/large.css" media="(min-width:800px)">
+    <link rel="icon" href="icon/favicon.ico">
+    <meta property="og:title" content="Burlington Chamber of Commerce ">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://aaronfonoi.github.io/wdd231/">
+    <meta property="og:url" content="https://aaronfonoi.github.io/wdd231/">
+    <meta property="og:description" content="Burlington chamber of commerce here to provide information on local events, create business directories, host networking opportunities and encourage the growth of local economies, support small local businesses and to create a sense of community for everyone.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" as="style" onload="this.rel='stylesheet'">
+    <noscript><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"></noscript>
+    <script defer src="scripts/getdates.js"></script>
+    <script defer src="scripts/directory.js"></script>
+    <script defer src="scripts/menu.js"></script>
+    <script defer src="scripts/weather.js"></script>
+    <script defer src="scripts/spotlight.js"></script>
+    <script defer src="scripts/modals.js"></script>
+    <script defer src="scripts/forms.js"></script>
+   
+
+</head>
+<body>
+    <header>
+
+        <!-- NAVIGATION -->
+
+        <div class="header">
+            <div class="site-logo">
+                <a href="index.html"><img src="images/logo.webp" alt="Logo for site" width="50" loading="lazy"></a>
+            </div>
+            <!-- Hamburger menu button -->
+            <button id="menubutton" aria-label="menu"></button>
+        </div>
+
+        <nav id="animatemenu">
+            <ul class="navigation-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html">directory</a></li>
+                <li><a href="join.html" class="active-menu-link">Join</a></li>
+                <li><a href="discover.html">Discover</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1 class="join-title">Join</h1>
+        <div class="join-layout">
+            
+        
+            <div class="form-container">
+            <h2>Membership Application</h2>
+            <form method="GET" action="thankyou.html" class="designOne">
+
+                <label>First Name <input type="text" name="first" required autocomplete="given-name" title="Your First Name"></label>
+                <label>Last Name <input type="text" name="last" required autocomplete="family-name" title="Your Last Name"></label>
+                <label>Title <input type="text" name="title" required placeholder="ex: Sales Manager" title="Your Title"></label>                  
+                <label>Email <input type="email" name="email" required placeholder="john89@gmail.com"  title="Your Email" autocomplete="email"></label>
+                <label>Cell Phone <input type="tel" name="phone" required autocomplete="tel" title="A Phone Number with dashes" placeholder="987-555-1234" ></label>
+                <label>Organization <input type="text" name="organization"  title="Your Organization" required autocomplete="organization"></label>
+                <label>Business Description <textarea name="description" title="Your Organization Description"></textarea></label>
+                
+        
+                <h3>Select Membership Level</h3>
+                <label><input type="radio" name="membership" value="NP" checked> NP Membership (Non-profit)</label>
+                <label><input type="radio" name="membership" value="Bronze"> Bronze Membership</label>
+                <label><input type="radio" name="membership" value="Silver"> Silver Membership</label>
+                <label><input type="radio" name="membership" value="Gold"> Gold Membership</label>
+        
+                
+                <!-- Hidden Timestamp Field -->
+                <input type="hidden" name="timestamp" id="timestamp">
+
+        
+                <input type="submit" value="Become a Member">
+            </form>
+            </div>
+
+            <!-- Membership Cards and Modals -->
+            
+            <div class="membership-container">
+                <h2>Membership Levels</h2>
+                <div class="membership-card np-card">
+                    <p>NP Membership</p>
+                    <button class="openButton" data-modal="npModal">More Information</button>
+                    <dialog id="npModal" class="modal">
+                        <h3>NP Membership Benefits</h3>
+                        <p>Includes access to non-profit community events, limited advertising opportunities, and participation in select chamber events at a discounted rate.</p>
+                        <button class="closeButton">Close</button>
+                    </dialog>
+                </div>
+
+                <div class="membership-card bronze-card">
+                    <p>Bronze Membership</p>
+                    <button class="openButton" data-modal="bronzeModal">More Information</button>
+                    <dialog id="bronzeModal" class="modal">
+                        <h3>Bronze Membership Benefits</h3>
+                        <p>Includes discounted events, basic advertising in the chamber directory, and invitations to chamber networking events.</p>
+                        <button class="closeButton">Close</button>
+                    </dialog>
+                </div>
+
+                <div class="membership-card silver-card">
+                    <p>Silver Membership</p>
+                    <button class="openButton" data-modal="silverModal">More Information</button>
+                    <dialog id="silverModal" class="modal">
+                        <h3>Silver Membership Benefits</h3>
+                        <p>Includes premium event access, featured advertising, and a spotlight position on the home page.</p>
+                        <button class="closeButton">Close</button>
+                    </dialog>
+                </div>
+
+                <div class="membership-card gold-card">
+                    <p>Gold Membership</p>
+                    <button class="openButton" data-modal="goldModal">More Information</button>
+                    <dialog id="goldModal" class="modal">
+                        <h3>Gold Membership Benefits</h3>
+                        <p>Full access to all events, premier advertising, and VIP benefits, including exclusive business opportunities and top-tier spotlight positions.</p>
+                        <button class="closeButton">Close</button>
+                    </dialog>
+                </div>
+            </div>
+        </div>
+        
+                
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-links">
+                <div class="footer-section">
+                    <h4>Contact information</h4>
+                    <ul>
+                        <li>aaronfonoi@gmail.com</li>
+                        <li>1700 East Hazel Street, MT VERNON, Washington 98274-5100, United States</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow us</h4>
+                    <ul class="social-media">
+                        <li><a href="https://github.com/aaronfonoi" aria-label="github"><i class="fab fa-github"></i></a></li>
+                        <li><a href="www.linkedin.com/in/aaron-fonoimoana-1a2830195" aria-label="linkedin"><i class="fab fa-linkedin"></i></a></li>
+                        <li><a href="https://www.facebook.com/aaron.fonoimoana" aria-label="instagram"><i class="fab fa-facebook"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <hr class="footer-separator">
+
+            <div class="footer-bottom">
+                <div class="footer-logo">
+                    <a href=""><img src="images/logo.webp" alt="site-logo" width="50" loading="lazy"></a>
+                </div>
+                <p id="year">&copy; <span class="highlight">YYYY</span> Aaron Fonoimoana | Burlington, WA, US</p>
+            </div>
+            <p> <span class="highlight"></span> </p>
+            <p id="lastModifiedDate" class="highlight">Last modified: </p>
+        </div>
+    </footer>
+    
+</body>
+</html>

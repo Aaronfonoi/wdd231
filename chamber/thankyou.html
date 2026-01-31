@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Burlington Chamber of Commerce</title>
+    <meta name="description" content="This page is the chamber of commerce project of the WDD 231 course">
+    <meta name="author" content="Aaron Fonoimoana">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/large.css" media="(min-width:800px)">
+    <link rel="icon" href="icon/favicon.ico">
+    <meta property="og:title" content="Burlington Chamber of Commerce ">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://aaronfonoi.github.io/wdd231/">
+    <meta property="og:url" content="https://aaronfonoi.github.io/wdd231/">
+    <meta property="og:description" content="Burlington chamber of commerce here to provide information on local events, create business directories, host networking opportunities and encourage the growth of local economies, support small local businesses and to create a sense of community for everyone.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" as="style" onload="this.rel='stylesheet'">
+    <noscript><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"></noscript>
+    <script defer src="scripts/getdates.js"></script>
+    <script defer src="scripts/directory.js"></script>
+    <script defer src="scripts/menu.js"></script>
+    <script defer src="scripts/weather.js"></script>
+    <script defer src="scripts/spotlight.js"></script>
+    <script defer src="scripts/modals.js"></script>
+    <script defer src="scripts/forms.js"></script>
+   
+
+</head>
+<body>
+    <header>
+
+        <!-- NAVIGATION -->
+
+        <div class="header">
+            <div class="site-logo">
+                <a href="index.html"><img src="images/logo.webp" alt="Logo for site" width="50" loading="lazy"></a>
+            </div>
+            <!-- Hamburger menu button -->
+            <button id="menubutton" aria-label="menu"></button>
+        </div>
+
+        <nav id="animatemenu">
+            <ul class="navigation-links">
+                <li><a href="index.html" class="active-menu-link">Home</a></li>
+                <li><a href="directory.html">directory</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="discover.html">Discover</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1 class="application-submitted">Your application was submitted successfuly</h1>
+        <h2 class="application-title">Membership Application Details</h2>
+
+        <div id="results"></div>
+                
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-links">
+                <div class="footer-section">
+                    <h4>Contact information</h4>
+                    <ul>
+                        <li>aaronfonoi@gmail.com</li>
+                        <li>1700 East Hazel Street, MT VERNON, Washington 98274-5100, United States</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow us</h4>
+                    <ul class="social-media">
+                        <li><a href="https://github.com/aaronfonoi" aria-label="github"><i class="fab fa-github"></i></a></li>
+                        <li><a href="www.linkedin.com/in/aaron-fonoimoana-1a2830195" aria-label="linkedin"><i class="fab fa-linkedin"></i></a></li>
+                        <li><a href="https://www.facebook.com/aaron.fonoimoana" aria-label="instagram"><i class="fab fa-facebook"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <hr class="footer-separator">
+
+            <div class="footer-bottom">
+                <div class="footer-logo">
+                    <a href=""><img src="images/logo.webp" alt="site-logo" width="50" loading="lazy"></a>
+                </div>
+                <p id="year">&copy; <span class="highlight">YYYY</span> Aaron Fonoimoana | Burlington, WA, US</p>
+            </div>
+            <p> <span class="highlight"></span> </p>
+            <p id="lastModifiedDate" class="highlight">Last modified: </p>
+        </div>
+    </footer>
+    
+</body>
+</html>
