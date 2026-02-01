@@ -632,18 +632,6 @@ h1 {
 
 
 
-
-
-    
-
-    
-
-
-    
-
-
-
-
 /*----------- FOOTER --------------*/
 
 .footer {
@@ -721,7 +709,7 @@ h1 {
 }
 
 .social-links li a:hover {
-    color: #228B22;
+    color: #3fff3f;
 }
 
 .footer-separator {
