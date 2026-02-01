@@ -35,7 +35,7 @@ const time = new Date(timestamp).toLocaleTimeString();  // Extract the time
 
 showInfo.innerHTML = `
 <h3>Application for ${capitalize(show("first"))} ${capitalize(show("last"))}</h3>
-<p><strong>Your title:</strong> ${capitalize(show("title"))}</p>
+<p><strong>Your organization title:</strong> ${capitalize(show("title"))}</p>
 <p><strong>Your Email:</strong> <a href="mailto:${show("email")}">${show("email")}</a></p>
 <p><strong>Your Phone:</strong> ${show("phone")}</p>
 <p><strong>Your Organization:</strong> ${show("organization")}</p>
