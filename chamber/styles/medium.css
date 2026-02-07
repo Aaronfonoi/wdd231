@@ -9,7 +9,7 @@
 
 
 
-@media (min-width: 64rem) {
+@media (min-width: 38rem) {
     .nav-links {
         display: flex;
         align-items: center;
@@ -516,7 +516,7 @@ h1 {
 
 /*----------- Discovery grid area --------------*/
 
-#photos-container {
+#photos-container div {
     margin: 1rem 8px;
     border: 1px solid var(--accent2-color);
     background-color: white;
@@ -524,11 +524,37 @@ h1 {
     overflow: hidden;
 
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "photo name"
+    "photo description"
+    "photo location";
+}
+
+#photos-container div h2  {
+        margin: 1rem 10px;
+        grid-area: name;
 
 }
 
+#photos-container div img {
+    width: 100%;
 
+    grid-area: photo;
+    width: 300px;
+    
+}
+
+#photos-container div p {
+    margin: 1rem 10px;
+
+    grid-area: description;
+}
+
+#photos-container div address {
+    margin: 1rem 10px;
+
+    grid-area: location;
+}
 
 
 }

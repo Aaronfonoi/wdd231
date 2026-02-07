@@ -769,4 +769,48 @@ footer p {
     }
 }
 
+/*----------- Discovery grid area --------------*/
+
+#photos-container div {
+    margin: 1rem 8px;
+    border: 1px solid var(--accent2-color);
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+
+    display: grid;
+    grid-template-areas: 
+    "name"
+    "photo"
+    "location"
+    "description";
+}
+
+#photos-container div h2  {
+        margin: 1rem 10px;
+        grid-area: name;
+
+}
+
+#photos-container div img {
+    width: 100%;
+
+    grid-area: photo;
+    
+}
+
+#photos-container div p {
+    margin: 1rem 10px;
+
+    grid-area: description;
+}
+
+#photos-container div address {
+    margin: 1rem 10px;
+
+    grid-area: location;
+}
+
+
+
 
