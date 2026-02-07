@@ -744,7 +744,7 @@ h1 {
     margin: 0 auto;
     font-weight: 600;
     font-size: .8rem;
-    color: #989898;
+    color: #333333; /* Improved contrast from #989898 */
 }
 
 footer p {
