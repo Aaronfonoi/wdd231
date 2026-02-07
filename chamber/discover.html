@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Join | Burlington Chamber of Commerce</title>
+    <title>Discover | Burlington Chamber of Commerce</title>
     <meta name="description" content="This page is the chamber of commerce project of the WDD 231 course">
     <meta name="author" content="Aaron Fonoimoana">
     <link rel="stylesheet" href="styles/base.css">
@@ -33,6 +33,14 @@
 
 </head>
 <body>
+    <!-- Visit overlay (shown by scripts/discover.js) -->
+    <div id="visit-overlay" role="dialog" aria-modal="true" aria-hidden="true" style="position:fixed; inset:0; background:rgba(0,0,0,0.6); z-index:9999; display:none; align-items:center; justify-content:center;">
+        <div id="visit-message" style="background:#fff; padding:1rem 1.25rem; max-width:420px; border-radius:8px; text-align:center; margin:1rem;">
+            <!-- Message populated by discover.js -->
+            <div id="visit-text" style="margin-top:0.5rem;"></div>
+            <button id="close-overlay" aria-label="Close visit dialog" type="button" style="margin-top:1rem;">Close</button>
+        </div>
+    </div>
     <header>
 
         <!-- NAVIGATION -->
@@ -118,6 +126,18 @@
             <p id="lastModifiedDate" class="highlight">Last modified: </p>
         </div>
     </footer>
-    
+    <!-- Place details modal (populated by scripts/places.js) -->
+    <dialog id="place-modal" class="modal" aria-labelledby="modal-title">
+        <div style="padding:1rem; max-width:600px;">
+            <h3 id="modal-title"></h3>
+            <img id="modal-image" src="" alt="" style="max-width:100%; height:auto; display:block; margin:0.5rem 0;" loading="lazy">
+            <address id="modal-address" style="font-style:normal; margin:0.5rem 0;"></address>
+            <p id="modal-description"></p>
+            <div style="text-align:right; margin-top:1rem;">
+                <button class="closeButton" id="modal-close" type="button">Close</button>
+            </div>
+        </div>
+    </dialog>
+
 </body>
 </html>

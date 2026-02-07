@@ -71,65 +71,7 @@ nav a.active-menu-link {
   
 
 
-/*----------- HERO SECTION FOR LARGE SCREENS --------------*/
 
-
-.hero-container {
-    width: 100%;
-    margin: 0 auto;
-    max-width: 1200px;
-}
-
-.hero {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    padding: 5em 10em;
-    
-    color: #333;
-}
-
-.hero-text {
-    max-width: 50%;
-    text-align: left;
-}
-
-h2 {
-    font-size: 2rem;
-    font-weight: bold;
-    margin: 20px 0;
-    color: #8B4513;
-}
-
-p {
-    font-size: .9rem;
-    line-height: 1.6;
-    margin-bottom: 30px;
-    color: #555;
-}
-
-.hero-btn {
-    display: inline-block;
-    padding: 15px 30px;
-    background-color: #8B4513;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 25px;
-    font-size: 1.2rem;
-    font-weight: 500;
-    transition: background-color 0.3s ease;
-}
-
-.hero-btn:hover {
-    background-color: rgb(83, 167, 117);
-}
-
-.hero-image {
-    max-width: 45%;
-    height: auto;
-    border-radius: 10px;
-}
 
 
 
@@ -516,7 +458,8 @@ h1 {
 
 /*----------- Discovery grid area --------------*/
 
-#photos-container div {
+/* Make styles apply to any direct child (article or div) inside photos container */
+#photos-container > * {
     margin: 1rem 8px;
     border: 1px solid var(--accent2-color);
     background-color: white;
@@ -530,13 +473,13 @@ h1 {
     "photo location";
 }
 
-#photos-container div h2  {
+#photos-container > * h2  {
         margin: 1rem 10px;
         grid-area: name;
 
 }
 
-#photos-container div img {
+#photos-container > * img {
     width: 100%;
 
     grid-area: photo;
@@ -544,13 +487,13 @@ h1 {
     
 }
 
-#photos-container div p {
+#photos-container > * p {
     margin: 1rem 10px;
 
     grid-area: description;
 }
 
-#photos-container div address {
+#photos-container > * address {
     margin: 1rem 10px;
 
     grid-area: location;
