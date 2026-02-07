@@ -34,11 +34,11 @@
 </head>
 <body>
     <!-- Visit overlay (shown by scripts/discover.js) -->
-    <div id="visit-overlay" role="dialog" aria-modal="true" aria-hidden="true" style="position:fixed; inset:0; background:rgba(0,0,0,0.6); z-index:9999; display:none; align-items:center; justify-content:center;">
-        <div id="visit-message" style="background:#fff; padding:1rem 1.25rem; max-width:420px; border-radius:8px; text-align:center; margin:1rem;">
+    <div id="visit-overlay" class="visit-overlay" role="dialog" aria-modal="true" aria-hidden="true">
+        <div id="visit-message" class="visit-message">
             <!-- Message populated by discover.js -->
-            <div id="visit-text" style="margin-top:0.5rem;"></div>
-            <button id="close-overlay" aria-label="Close visit dialog" type="button" style="margin-top:1rem; background-color:#8B4513; color:white; padding:0.5rem 1rem; border:none; border-radius:4px; cursor:pointer;">Close</button>
+            <div id="visit-text" class="visit-text"></div>
+            <button id="close-overlay" class="modal-button" aria-label="Close visit dialog" type="button">Close</button>
         </div>
     </div>
     <header>
@@ -126,14 +126,14 @@
         </div>
     </footer>
     <!-- Place details modal (populated by scripts/places.js) -->
-    <dialog id="place-modal" class="modal" aria-labelledby="modal-title">
-        <div style="padding:1rem; max-width:600px;">
+    <dialog id="place-modal" class="modal place-modal" aria-labelledby="modal-title">
+        <div class="modal-content">
             <h3 id="modal-title"></h3>
-            <img id="modal-image" src="" alt="Place image" style="max-width:100%; height:auto; display:block; margin:0.5rem 0;" loading="lazy">
-            <address id="modal-address" style="font-style:normal; margin:0.5rem 0;"></address>
+            <img id="modal-image" class="modal-image" src="" alt="Place image" loading="lazy">
+            <address id="modal-address" class="modal-address"></address>
             <p id="modal-description"></p>
-            <div style="text-align:right; margin-top:1rem;">
-                <button class="closeButton" id="modal-close" type="button" style="background-color:#8B4513; color:white; padding:0.5rem 1rem; border:none; border-radius:4px; cursor:pointer;">Close</button>
+            <div class="modal-footer">
+                <button class="closeButton modal-button" id="modal-close" type="button">Close</button>
             </div>
         </div>
     </dialog>
