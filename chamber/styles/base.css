@@ -1,9 +1,9 @@
 :root {
-    --primary-color: #228B22; /* Forest green for farm fields */
-    --secondary-color: #8B4513; /* Saddle brown for earthy tones */
-    --accent1-color: #FFD700; /* Gold for wheat/sun */
-    --accent2-color: #32CD32; /* Lime green for fresh crops */
-    --accent3-color: #654321; /* Dark brown for barns/wood */
+    --primary-color: #1a1a1a; /* Deep charcoal black - professional, sleek */
+    --secondary-color: #DC143C; /* Crimson red - racing, energy, passion */
+    --accent1-color: #C0C0C0; /* Silver - metallic, chrome, luxury */
+    --accent2-color: #FF6B35; /* Vibrant orange - excitement, high performance */
+    --accent3-color: #0066CC; /* Electric blue - modern, tech-forward */
 }
 
 * {

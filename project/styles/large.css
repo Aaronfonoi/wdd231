@@ -1,0 +1,67 @@
+/* ====== TABLET & DESKTOP SCREENS ====== */
+
+@media (min-width: 768px) {
+
+.container {
+max-width: 1200px;
+margin: 0 auto;
+padding: 32px;
+}
+
+header {
+padding: 24px 32px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+border-bottom: 3px solid var(--secondary-color); /* Crimson accent line */
+}
+
+nav ul {
+flex-direction: row;
+justify-content: center;
+gap: 16px;
+background: transparent;
+padding: 0;
+}
+
+nav li {
+border: 2px solid var(--secondary-color);
+border-radius: 6px;
+padding: 12px 20px;
+background: #ffffff;
+transition: all 0.3s ease;
+}
+
+nav li:hover {
+background-color: var(--secondary-color);
+color: #ffffff;
+}
+
+.grid {
+grid-template-columns: repeat(3, 1fr);
+gap: 24px;
+}
+
+.box {
+padding: 24px;
+font-size: 16px;
+border: 2px solid var(--secondary-color); /* Solid border on desktop */
+border-radius: 8px;
+box-shadow: 0 4px 12px rgba(220, 20, 60, 0.15);
+transition: all 0.3s ease;
+}
+
+.box:hover {
+transform: translateY(-4px);
+box-shadow: 0 8px 20px rgba(220, 20, 60, 0.25);
+border-color: var(--accent2-color); /* Orange on hover */
+}
+
+footer {
+padding: 24px 32px;
+margin-top: 40px;
+border-top: 3px solid var(--secondary-color); /* Crimson accent line */
+text-align: center;
+}
+
+}

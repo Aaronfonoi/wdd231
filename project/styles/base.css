@@ -1,0 +1,105 @@
+/* ====== COLOR SCHEME - CAR CLUB ====== */
+:root {
+    --primary-color: #1a1a1a; 
+    --secondary-color: #DC143C; 
+    --accent1-color: #C0C0C0; 
+    --accent2-color: #FF6B35; 
+    --accent3-color: #0066CC; 
+}
+
+/* ====== MOBILE / SMALL SCREENS ====== */
+* {
+box-sizing: border-box;
+}
+
+
+body {
+margin: 0;
+font-family: Arial, Helvetica, sans-serif;
+background: var(--accent1-color); /* Silver background */
+color: var(--primary-color); /* Dark charcoal text */
+}
+
+
+.container {
+max-width: 100%;
+padding: 16px;
+}
+
+
+.box {
+background: #ffffff;
+border: 2px dashed var(--secondary-color); /* Crimson red border */
+border-radius: 8px;
+padding: 16px;
+margin-bottom: 16px;
+text-align: center;
+font-size: 14px;
+color: var(--primary-color);
+box-shadow: 0 2px 8px rgba(26, 26, 26, 0.1);
+transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.box:active {
+transform: translateY(2px);
+box-shadow: 0 1px 4px rgba(26, 26, 26, 0.15);
+}
+
+
+.label {
+display: block;
+font-weight: bold;
+margin-bottom: 8px;
+color: var(--secondary-color); /* Crimson red for emphasis */
+}
+
+button,
+input[type="submit"] {
+background-color: var(--secondary-color); /* Crimson red */
+color: #ffffff;
+border: none;
+border-radius: 4px;
+padding: 10px 16px;
+font-weight: bold;
+cursor: pointer;
+font-size: 14px;
+transition: background-color 0.3s ease;
+}
+
+button:hover,
+input[type="submit"]:hover {
+background-color: var(--accent2-color); /* Orange on hover */
+}
+
+
+header,
+footer {
+background: var(--primary-color); /* Deep charcoal */
+color: var(--accent1-color); /* Silver text */
+padding: 12px;
+}
+
+
+nav ul {
+list-style: none;
+padding: 0;
+margin: 12px 0 0 0;
+display: flex;
+flex-direction: column;
+gap: 8px;
+}
+
+
+nav li {
+padding: 10px;
+border: 1px dashed var(--secondary-color); /* Crimson dashed border */
+background: #ffffff;
+color: var(--primary-color);
+}
+
+
+.grid {
+display: grid;
+grid-template-columns: 1fr;
+gap: 16px;
+}
