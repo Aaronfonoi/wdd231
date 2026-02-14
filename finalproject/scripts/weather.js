@@ -10,7 +10,7 @@ const myLat = "48.47";
 const myLong = "-122.33";
 
 
-const url = `//api.openweathermap.org/data/2.5/weather?lat=${myLat}&lon=${myLong}&appid=${myKey}&units=imperial`;
+const url = `https://api.openweathermap.org/data/2.5/weather?lat=${myLat}&lon=${myLong}&appid=${myKey}&units=imperial`;
 
 // To grab the current weather data
 async function apiFetch() {
@@ -48,7 +48,7 @@ const dayNameNext = document.querySelector('#day-name-next span:first-child');
 const dayNameAfter = document.querySelector('#day-name-after span:first-child');
 
 // Forecast API URL
-const forecastUrl = `//api.openweathermap.org/data/2.5/forecast?lat=${myLat}&lon=${myLong}&appid=${myKey}&units=imperial`;
+const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${myLat}&lon=${myLong}&appid=${myKey}&units=imperial`;
 
 // Fetch weather forecast data
 async function fetchForecast() {
