@@ -1,0 +1,104 @@
+[
+    {
+        "name": "Microsoft Corporation",
+        "address": "1 Microsoft Way, Redmond, WA 98052",
+        "phone_number": "+1-425-882-8080",
+        "website_url": "https://www.microsoft.com",
+        "image": "microsoft_logo.png",
+        "membership_level": 3,
+        "email": "contact@microsoft.com",
+        "services": ["Software Development", "Cloud Services", "AI Solutions"],
+        "founded": 1975
+      },
+      {
+        "name": "IBM",
+        "address": "1 New Orchard Road, Armonk, NY, 10504-1722, United States",
+        "phone_number": "+1-914-499-1900",
+        "website_url": "https://www.ibm.com",
+        "image": "ibm_logo.webp",
+        "membership_level": 3,
+        "email": "info@ibm.com",
+        "services": ["Cloud Computing", "AI", "Blockchain", "Consulting", "Quantum Computing"],
+        "founded": 1911,
+        "employees": 345900,
+        "global_offices": 170
+    },
+      {
+        "name": "Google LLC",
+        "address": "1600 Amphitheatre Parkway, Mountain View, CA 94043",
+        "phone_number": "+1-650-253-0000",
+        "website_url": "https://www.google.com",
+        "image": "google_logo.webp",
+        "membership_level": 1,
+        "email": "contact@google.com",
+        "services": ["Search Engine", "Cloud Computing", "Advertising"],
+        "founded": 1998
+      },
+      {
+        "name": "Apple Inc.",
+        "address": "1 Apple Park Way, Cupertino, CA 95014",
+        "phone_number": "+1-408-996-1010",
+        "website_url": "https://www.apple.com",
+        "image": "apple_logo.webp",
+        "membership_level": 3,
+        "email": "contact@apple.com",
+        "services": ["Consumer Electronics", "Software", "Digital Services"],
+        "founded": 1976
+      },
+      {
+        "name": "Amazon.com, Inc.",
+        "address": "410 Terry Avenue North, Seattle, WA 98109",
+        "phone_number": "+1-206-266-1000",
+        "website_url": "https://www.amazon.com",
+        "image": "amazon_logo.webp",
+        "membership_level": 2,
+        "email": "contact@amazon.com",
+        "services": ["E-commerce", "Cloud Computing", "Streaming"],
+        "founded": 1994
+    },
+    {
+        "name": "Netflix, Inc.",
+        "address": "100 Winchester Circle, Los Gatos, CA 95032",
+        "phone_number": "+1-408-540-3700",
+        "website_url": "https://www.netflix.com",
+        "image": "netflix_logo.webp",
+        "membership_level": 3,
+        "email": "contact@netflix.com",
+        "services": ["Streaming Service", "Film Production"],
+        "founded": 1997
+    },
+    {
+        "name": "Airbnb",
+        "address": "888 Brannan St, San Francisco, CA 94103",
+        "phone_number": "+1-415-800-5959",
+        "website_url": "https://www.airbnb.com",
+        "image": "airbnb_logo.webp",
+        "membership_level": 1,
+        "email": "contact@airbnb.com",
+        "services": ["Vacation Rentals", "Travel Experiences", "Unique Stays"],
+        "founded": 2008
+    },
+    {
+        "name": "Tesla, Inc.",
+        "address": "3500 Deer Creek Road, Palo Alto, CA 94304",
+        "phone_number": "+1-650-681-5000",
+        "website_url": "https://www.tesla.com",
+        "image": "tesla_logo.webp",
+        "membership_level": 2,
+        "email": "contact@tesla.com",
+        "services": ["Electric Vehicles", "Energy Solutions"],
+        "founded": 2003
+      },
+    {
+        "name": "Shutterfly, LLC.",
+        "address": "10 Almaden Blvd San Jose, CA 95113",
+        "phone_number": "+1-877-846-5515",
+        "website_url": "https://www.shutterfly.com/",
+        "image": "shutterfly-logo.webp",
+        "membership_level": 2,
+        "email": "customerservice@cs.shutterfly.com",
+        "services": ["Photo printing", "Gift solutions", "Home decor"],
+        "founded": 1999
+    }
+  ]
+  
