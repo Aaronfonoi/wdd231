@@ -17,16 +17,30 @@
 
 
     header {
-        display: flex;
+        display: grid;
+        grid-template-columns: 1fr;
         align-items: center;
-        justify-content: space-around;
-        color: white;
         box-shadow: 0 0 20px #FF6B35;
         width: 100%;
-        position: fixed;  /* Fix header position */
+        position: fixed;
         top: 0;
         left: 0;
         z-index: 1000;
+        background: white;
+    }
+
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0;
+    }
+
+    .site-logo {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+        padding: 0.4rem 1rem;
     }
 
 
@@ -422,13 +436,13 @@ h1 {
 
 .join-layout {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); /* Two equal columns */
     gap: 2em;
     align-items: flex-start;
 }
 
 .join-title {
-    grid-column: 1 / 2;
+    grid-column: 1 / -1;
     text-align: center;
     margin: 4em 0 1em 0;
 }
@@ -448,6 +462,7 @@ h1 {
 
 
 .membership-container {
+    grid-column: 2 / 3; /* Membership cards on right side */
     display: grid;
     grid-template-columns: 1fr 1fr ;
     margin-bottom: 0;
@@ -471,7 +486,9 @@ h1 {
     padding: .5em;
     background-color: var(--accent1-color);
     text-align: center;
-    width: 80%;
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto;
 }
 
 

@@ -471,7 +471,9 @@ h1 {
     padding: .5em;
     background-color: var(--accent1-color);
     text-align: center;
-    width: 80%;
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto;
 }
 
 
