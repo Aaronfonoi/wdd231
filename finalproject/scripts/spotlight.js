@@ -7,54 +7,49 @@ function shuffleArray(array) {
     return array;
 }
 
-// Function to fetch members and filter spotlight members
+// Function to fetch groups and display spotlight groups
 async function fetchSpotlightMembers() {
     try {
-        const response = await fetch('data/groups.json'); // Replace with your actual JSON file path
+        const response = await fetch('data/groups.json');
         if (!response.ok) {
             throw new Error('Network response was not ok');
         }
-        const members = await response.json();
-
-  
+        const groups = await response.json();
 
         // Shuffle the array to randomize the selection
-        const shuffledMembers = shuffleArray(spotlightMembers);
+        const shuffledGroups = shuffleArray(groups);
 
-        // Select 2 or 3 random members (depending on how many are available)
-        const selectedMembers = shuffledMembers.slice(0, Math.min(shuffledMembers.length, 3));
+        // Select 2 or 3 random groups (depending on how many are available)
+        const selectedGroups = shuffledGroups.slice(0, Math.min(shuffledGroups.length, 3));
 
-        // Display spotlight members
-        displaySpotlightMembers(selectedMembers);
+        // Display spotlight groups
+        displaySpotlightMembers(selectedGroups);
     } catch (error) {
-        console.error('Error fetching or processing members:', error);
+        console.error('Error fetching or processing groups:', error);
     }
 }
 
-// Function to display spotlight members
-function displaySpotlightMembers(members) {
+// Function to display spotlight groups
+function displaySpotlightMembers(groups) {
     const spotlightContainer = document.getElementById('spotlight-container');
     spotlightContainer.innerHTML = '';  // Clear previous content
 
-    members.forEach(member => {
+    groups.forEach(group => {
         const spotlightCard = document.createElement('div');
         spotlightCard.classList.add('spotlight-card');
 
         spotlightCard.innerHTML = `
-            <h3>${member.name}</h3>
-            <img src="images/${member.image}" alt="${member.name} logo" width="100" loading="lazy">
-            <p><strong>Phone:</strong> ${member.phone_number}</p>
-            <p><strong>Address:</strong> ${member.address}</p>
-            <p><strong>Website:</strong> <a href="${member.website_url}" target="_blank">${member.website_url}</a></p>
-            <p><strong>Membership Level:</strong> ${getMembershipLevel(member.membership_level)}</p>
+            <h3>${group.group_name}</h3>
+            <img src="images/${group.image}" alt="${group.group_name} logo" width="100" loading="lazy">
+            <p><strong>Category:</strong> ${group.category}</p>
+            <p><strong>Description:</strong> ${group.description}</p>
+            <p><strong>Members:</strong> ${group.members}</p>
+            <p><strong>Established:</strong> ${group.established}</p>
         `;
 
         spotlightContainer.appendChild(spotlightCard);
     });
 }
-
-
-
 
 // Call the function when the page loads
 window.onload = fetchSpotlightMembers;

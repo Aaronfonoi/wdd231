@@ -1,104 +1,76 @@
 [
     {
-        "name": "Microsoft Corporation",
-        "address": "1 Microsoft Way, Redmond, WA 98052",
-        "phone_number": "+1-425-882-8080",
-        "website_url": "https://www.microsoft.com",
-        "image": "microsoft_logo.png",
-        "membership_level": 3,
-        "email": "contact@microsoft.com",
-        "services": ["Software Development", "Cloud Services", "AI Solutions"],
-        "founded": 1975
-      },
-      {
-        "name": "IBM",
-        "address": "1 New Orchard Road, Armonk, NY, 10504-1722, United States",
-        "phone_number": "+1-914-499-1900",
-        "website_url": "https://www.ibm.com",
-        "image": "ibm_logo.webp",
-        "membership_level": 3,
-        "email": "info@ibm.com",
-        "services": ["Cloud Computing", "AI", "Blockchain", "Consulting", "Quantum Computing"],
-        "founded": 1911,
-        "employees": 345900,
-        "global_offices": 170
-    },
-      {
-        "name": "Google LLC",
-        "address": "1600 Amphitheatre Parkway, Mountain View, CA 94043",
-        "phone_number": "+1-650-253-0000",
-        "website_url": "https://www.google.com",
-        "image": "google_logo.webp",
-        "membership_level": 1,
-        "email": "contact@google.com",
-        "services": ["Search Engine", "Cloud Computing", "Advertising"],
-        "founded": 1998
-      },
-      {
-        "name": "Apple Inc.",
-        "address": "1 Apple Park Way, Cupertino, CA 95014",
-        "phone_number": "+1-408-996-1010",
-        "website_url": "https://www.apple.com",
-        "image": "apple_logo.webp",
-        "membership_level": 3,
-        "email": "contact@apple.com",
-        "services": ["Consumer Electronics", "Software", "Digital Services"],
-        "founded": 1976
-      },
-      {
-        "name": "Amazon.com, Inc.",
-        "address": "410 Terry Avenue North, Seattle, WA 98109",
-        "phone_number": "+1-206-266-1000",
-        "website_url": "https://www.amazon.com",
-        "image": "amazon_logo.webp",
-        "membership_level": 2,
-        "email": "contact@amazon.com",
-        "services": ["E-commerce", "Cloud Computing", "Streaming"],
-        "founded": 1994
+      "group_name": "Rising Sun Syndicate",
+      "category": "JDM",
+      "description": "Japanese tuner and street builds focused on performance and clean aesthetics.",
+      "established": 2018,
+      "members": 27,
+      "image": "jdm.webp"
     },
     {
-        "name": "Netflix, Inc.",
-        "address": "100 Winchester Circle, Los Gatos, CA 95032",
-        "phone_number": "+1-408-540-3700",
-        "website_url": "https://www.netflix.com",
-        "image": "netflix_logo.webp",
-        "membership_level": 3,
-        "email": "contact@netflix.com",
-        "services": ["Streaming Service", "Film Production"],
-        "founded": 1997
+      "group_name": "Euro Elite Society",
+      "category": "European Performance",
+      "description": "Luxury and high-performance European builds ranging from OEM+ to fully modified.",
+      "established": 2016,
+      "members": 19,
+      "image": "euro.webp"
     },
     {
-        "name": "Airbnb",
-        "address": "888 Brannan St, San Francisco, CA 94103",
-        "phone_number": "+1-415-800-5959",
-        "website_url": "https://www.airbnb.com",
-        "image": "airbnb_logo.webp",
-        "membership_level": 1,
-        "email": "contact@airbnb.com",
-        "services": ["Vacation Rentals", "Travel Experiences", "Unique Stays"],
-        "founded": 2008
+      "group_name": "Liberty Street Muscle",
+      "category": "American Muscle",
+      "description": "Classic and modern American V8 performance enthusiasts.",
+      "established": 2015,
+      "members": 34,
+      "image": "muscle.webp"
     },
     {
-        "name": "Tesla, Inc.",
-        "address": "3500 Deer Creek Road, Palo Alto, CA 94304",
-        "phone_number": "+1-650-681-5000",
-        "website_url": "https://www.tesla.com",
-        "image": "tesla_logo.webp",
-        "membership_level": 2,
-        "email": "contact@tesla.com",
-        "services": ["Electric Vehicles", "Energy Solutions"],
-        "founded": 2003
-      },
+      "group_name": "Heritage Rollers",
+      "category": "Classic / Vintage",
+      "description": "Restored and preserved vintage vehicles celebrating automotive history.",
+      "established": 2012,
+      "members": 15,
+      "image": "vintage.webp"
+    },
     {
-        "name": "Shutterfly, LLC.",
-        "address": "10 Almaden Blvd San Jose, CA 95113",
-        "phone_number": "+1-877-846-5515",
-        "website_url": "https://www.shutterfly.com/",
-        "image": "shutterfly-logo.webp",
-        "membership_level": 2,
-        "email": "customerservice@cs.shutterfly.com",
-        "services": ["Photo printing", "Gift solutions", "Home decor"],
-        "founded": 1999
+      "group_name": "LowLife Collective",
+      "category": "Stance / Show Builds",
+      "description": "Lowered show builds focused on fitment, wheels, and visual presentation.",
+      "established": 2019,
+      "members": 22,
+      "image": "stance.webp"
+    },
+    {
+      "group_name": "Trail Blazers 4x4",
+      "category": "Off-Road / 4x4",
+      "description": "Lifted trucks and SUVs built for trails, mud, and overland adventures.",
+      "established": 2017,
+      "members": 29,
+      "image": "orv.webp"
+    },
+    {
+      "group_name": "Velocity Syndicate",
+      "category": "Supercars / Exotics",
+      "description": "High-end supercar owners focused on track days and exclusive showcases.",
+      "established": 2020,
+      "members": 12,
+      "image": "exotic.webp"
+    },
+    {
+      "group_name": "Iron Riders Crew",
+      "category": "Motorcycles",
+      "description": "Sport bike and cruiser riders organizing group rides and charity events.",
+      "established": 2014,
+      "members": 31,
+      "image": "motorcycle.webp"
+    },
+    
+    {
+      "group_name": "Street Performance Syndicate",
+      "category": "Street / Track",
+      "description": "Enthusiasts focused on street performance and track day builds.",
+      "established": 2018,
+      "members": 28,
+      "image": "performance.webp"
     }
   ]
   

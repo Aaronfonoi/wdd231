@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join | Burlington Chamber of Commerce</title>
+    <meta name="description" content="This page is the chamber of commerce project of the WDD 231 course">
+    <meta name="author" content="Aaron Fonoimoana">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/medium.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <link rel="icon" href="icon/favicon.ico">
+    <meta property="og:title" content="Burlington Chamber of Commerce ">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://aaronfonoi.github.io/wdd231/">
+    <meta property="og:url" content="https://aaronfonoi.github.io/wdd231/">
+    <meta property="og:description" content="Burlington chamber of commerce here to provide information on local events, create business directories, host networking opportunities and encourage the growth of local economies, support small local businesses and to create a sense of community for everyone.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" as="style" onload="this.rel='stylesheet'">
+    <noscript><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"></noscript>
+    <script defer src="scripts/getdates.js"></script>
+    <script defer src="scripts/directory.js"></script>
+    <script defer src="scripts/menu.js"></script>
+    <script defer src="scripts/weather.js"></script>
+    <script defer src="scripts/spotlight.js"></script>
+    <script defer src="scripts/modals.js"></script>
+    <script defer src="scripts/forms.js"></script>
+   
+
+</head>
+<body>
+    <header>
+         <div class="header">
+            <div class="site-logo">
+                <h1>Rusty Wrench Car Club</h1>
+                <a href="project.html"><img src="images/logo.webp" alt="Logo for site" width="100" loading="lazy"></a>
+            </div>
+            <!-- Hamburger menu button -->
+            <button id="menubutton" aria-label="menu"></button>
+        </div>
+
+        <nav id="animatemenu">
+            <ul class="navigation-links">
+                <li><a href="https://aaronfonoi.github.io/wdd231/finalproject/project.html">Home</a></li>
+                <li><a href="https://aaronfonoi.github.io/wdd231/finalproject/directory.html">Group directory</a></li>
+                <li><a href="https://aaronfonoi.github.io/wdd231/finalproject/join.html" class="active-menu-link">Join</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1 class="join-title">Join</h1>
+        <div class="join-layout">
+            
+        
+            <div class="form-container">
+            <h2>Membership Application</h2>
+            <form method="GET" action="thankyou.html" class="designOne">
+
+                <label>First Name <input type="text" name="first" required autocomplete="given-name" title="Your First Name"></label>
+                <label>Last Name <input type="text" name="last" required autocomplete="family-name" title="Your Last Name"></label>                 
+                <label>Email <input type="email" name="email" required placeholder="john89@gmail.com"  title="Your Email" autocomplete="email"></label>
+                <label>Cell Phone <input type="tel" name="phone" required autocomplete="tel" title="A Phone Number with dashes" placeholder="987-555-1234" ></label>
+                <label>Your car <textarea name="description" title="Your car description"></textarea></label>
+                
+        
+                <h3>Select Your Group</h3>
+                <label><input type="radio" name="membership" value="JDM" checked> Rising Sun Syndicate (JDM)</label>
+                <label><input type="radio" name="membership" value="European Performance"> Euro Elite Society (European Performance)</label>
+                <label><input type="radio" name="membership" value="American Muscle"> Liberty Street Muscle (American Muscle)</label>
+                <label><input type="radio" name="membership" value="Classic / Vintage"> Heritage Rollers (Classic / Vintage)</label>
+                <label><input type="radio" name="membership" value="Stance / Show Builds"> LowLife Collective (Stance / Show Builds)</label>
+                <label><input type="radio" name="membership" value="Off-Road / 4x4"> Trail Blazers 4x4 (Off-Road / 4x4)</label>
+                <label><input type="radio" name="membership" value="Supercars / Exotics"> Velocity Syndicate (Supercars / Exotics)</label>
+                <label><input type="radio" name="membership" value="Motorcycles"> Iron Riders Crew (Motorcycles)</label>
+                <label><input type="radio" name="membership" value="Street / Track"> Street Performance Syndicate (Street / Track)</label>
+        
+                
+                <!-- Hidden Timestamp Field -->
+                <input type="hidden" name="timestamp" id="timestamp">
+
+        
+                <input type="submit" value="Become a Member">
+            </form>
+            </div>
+
+            <!-- Groups and Modals -->
+            
+            <div class="membership-container">
+                <h2>Join a Group</h2>
+                <div class="membership-card np-card">
+                    <p>Rising Sun Syndicate</p>
+                    <button class="openButton" data-modal="jdmModal">More Information</button>
+                    <dialog id="jdmModal" class="modal">
+                        <h3>Rising Sun Syndicate (JDM)</h3>
+                        <p>Japanese tuner and street builds focused on performance and clean aesthetics. Established 2018 with 27 members.</p>
+                        <button class="closeButton">Close</button>
+                    </dialog>
+                </div>
+
+                <div class="membership-card bronze-card">
+                    <p>Euro Elite Society</p>
+                    <button class="openButton" data-modal="euroModal">More Information</button>
+                    <dialog id="euroModal" class="modal">
+                        <h3>Euro Elite Society (European Performance)</h3>
+                        <p>Luxury and high-performance European builds ranging from OEM+ to fully modified. Established 2016 with 19 members.</p>
+                        <button class="closeButton">Close</button>
+                    </dialog>
+                </div>
+
+                <div class="membership-card silver-card">
+                    <p>Liberty Street Muscle</p>
+                    <button class="openButton" data-modal="muscleModal">More Information</button>
+                    <dialog id="muscleModal" class="modal">
+                        <h3>Liberty Street Muscle (American Muscle)</h3>
+                        <p>Classic and modern American V8 performance enthusiasts. Established 2015 with 34 members.</p>
+                        <button class="closeButton">Close</button>
+                    </dialog>
+                </div>
+
+                <div class="membership-card gold-card">
+                    <p>Heritage Rollers</p>
+                    <button class="openButton" data-modal="vintageModal">More Information</button>
+                    <dialog id="vintageModal" class="modal">
+                        <h3>Heritage Rollers (Classic / Vintage)</h3>
+                        <p>Restored and preserved vintage vehicles celebrating automotive history. Established 2012 with 15 members.</p>
+                        <button class="closeButton">Close</button>
+                    </dialog>
+                </div>
+
+                <div class="membership-card np-card">
+                    <p>LowLife Collective</p>
+                    <button class="openButton" data-modal="stanceModal">More Information</button>
+                    <dialog id="stanceModal" class="modal">
+                        <h3>LowLife Collective (Stance / Show Builds)</h3>
+                        <p>Lowered show builds focused on fitment, wheels, and visual presentation. Established 2019 with 22 members.</p>
+                        <button class="closeButton">Close</button>
+                    </dialog>
+                </div>
+
+                <div class="membership-card bronze-card">
+                    <p>Trail Blazers 4x4</p>
+                    <button class="openButton" data-modal="orvModal">More Information</button>
+                    <dialog id="orvModal" class="modal">
+                        <h3>Trail Blazers 4x4 (Off-Road / 4x4)</h3>
+                        <p>Lifted trucks and SUVs built for trails, mud, and overland adventures. Established 2017 with 29 members.</p>
+                        <button class="closeButton">Close</button>
+                    </dialog>
+                </div>
+
+                <div class="membership-card silver-card">
+                    <p>Velocity Syndicate</p>
+                    <button class="openButton" data-modal="exoticModal">More Information</button>
+                    <dialog id="exoticModal" class="modal">
+                        <h3>Velocity Syndicate (Supercars / Exotics)</h3>
+                        <p>High-end supercar owners focused on track days and exclusive showcases. Established 2020 with 12 members.</p>
+                        <button class="closeButton">Close</button>
+                    </dialog>
+                </div>
+
+                <div class="membership-card gold-card">
+                    <p>Iron Riders Crew</p>
+                    <button class="openButton" data-modal="motoModal">More Information</button>
+                    <dialog id="motoModal" class="modal">
+                        <h3>Iron Riders Crew (Motorcycles)</h3>
+                        <p>Sport bike and cruiser riders organizing group rides and charity events. Established 2014 with 31 members.</p>
+                        <button class="closeButton">Close</button>
+                    </dialog>
+                </div>
+
+                <div class="membership-card np-card">
+                    <p>Street Performance Syndicate</p>
+                    <button class="openButton" data-modal="perfModal">More Information</button>
+                    <dialog id="perfModal" class="modal">
+                        <h3>Street Performance Syndicate (Street / Track)</h3>
+                        <p>Enthusiasts focused on street performance and track day builds. Established 2018 with 28 members.</p>
+                        <button class="closeButton">Close</button>
+                    </dialog>
+                </div>
+            </div>
+        </div>
+        
+                
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-links">
+                <div class="footer-section">
+                    <h4>Contact information</h4>
+                    <ul>
+                        <li>aaronfonoi@gmail.com</li>
+                        <li>1700 East Hazel Street, MT VERNON, Washington 98274-5100, United States</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow us</h4>
+                    <ul class="social-media">
+                        <li><a href="https://github.com/aaronfonoi" aria-label="github"><i class="fab fa-github"></i></a></li>
+                        <li><a href="www.linkedin.com/in/aaron-fonoimoana-1a2830195" aria-label="linkedin"><i class="fab fa-linkedin"></i></a></li>
+                        <li><a href="https://www.facebook.com/aaron.fonoimoana" aria-label="instagram"><i class="fab fa-facebook"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <hr class="footer-separator">
+
+            <div class="footer-bottom">
+                <div class="footer-logo">
+                    <a href=""><img src="images/logo.webp" alt="site-logo" width="50" loading="lazy"></a>
+                </div>
+                <p id="year">&copy; <span class="highlight">YYYY</span> Aaron Fonoimoana | Burlington, WA, US</p>
+            </div>
+            <p> <span class="highlight"></span> </p>
+            <p id="lastModifiedDate" class="highlight">Last modified: </p>
+        </div>
+    </footer>
+    
+</body>
+</html>
