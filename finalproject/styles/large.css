@@ -250,7 +250,7 @@ h1 {
     text-align: center;
     font-size: 2rem;
     margin: 4em 0 0 0;
-    color: var(--secondary-color);
+    color: var(--primary-color);
 }
 
 #directory-container.grid {
@@ -319,8 +319,8 @@ h1 {
     flex-direction: column;
     max-width: 500px;
     margin: 2em auto 2em 30%;
-    border: 1px solid var(--primary-color);
-    color: #228B22;
+    border: 1px solid var(--secondary-color);
+    color: var(--secondary-color);
     padding: 2em 4em;
     border-radius: 45px;
     box-shadow: none;
@@ -374,13 +374,13 @@ h1 {
     
       input:required {border-left-color: #ec6060;}
       input:focus {border-left-color: var(--primary-color); outline:none;}
-      input:required:valid{border-left-color: #228B22;}
+      input:required:valid{border-left-color: var(--accent3-color);}
     
       input[type=submit] {
         border: none;
         text-align: center;
-        background-color: #7aff7ad2;
-        color: #4e2305;
+        background-color: var(--accent3-color);
+        color: white;
         padding: .75rem 1.5rem;
         margin: 2rem 0;
         font-size: 1.2rem;
@@ -389,8 +389,8 @@ h1 {
       }
 
       input[type=submit]:hover {
-        background-color: #4e2305;
-        color: #7aff7ad2;
+        background-color: #009cc4;
+        color: white;
         cursor: pointer;
       }
 
@@ -436,7 +436,7 @@ h1 {
 .join-layout h2 {
     text-align: center;
     margin-bottom: 0;
-    color: rgb(71, 142, 100);
+    color: var(--primary-color);
     font-size: 1.6rem;
 }
 
@@ -451,7 +451,7 @@ h1 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     margin-bottom: 0;
-    color: rgb(71, 142, 100);
+    color: var(--accent1-color);
     font-size: 1.6rem;
 }
 
@@ -461,15 +461,15 @@ h1 {
     justify-content: center;
     text-align: center;
     margin: 0 0 1em 0;
-    color: rgb(71, 142, 100);
+    color: var(--primary-color);
     font-size: 1.6rem;
 }
 
 .membership-card {
-    border: 1px solid rgb(23, 53, 53);
+    border: 1px solid var(--secondary-color);
     border-radius: 20px;
     padding: .5em;
-    background-color: rgba(100, 200, 140, 0.2);
+    background-color: var(--accent1-color);
     text-align: center;
     width: 80%;
 }
@@ -478,7 +478,7 @@ h1 {
 
 .membership-card p {
     font-size: 1.2rem;
-    color: var(--secondary-color);
+    color: var(--primary-color);
     margin: .5em 0;
 }
 
